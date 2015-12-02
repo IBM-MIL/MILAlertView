@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
     
     func tappedAlert() {
-        println("MILAlertView callback!")
+        print("MILAlertView callback!")
     }
 
     @IBAction func tappedShowAlert(sender: AnyObject) {

@@ -78,7 +78,7 @@ public class MILAlertViewManager: NSObject {
     :param: forSeconds NSTimeInterval (Double) for how long the alert should stay shown before hiding
     */
     private func setAutoHide(forSeconds: NSTimeInterval?) {
-        if let cb = self.milAlertView.callback { //callback exists, so keep alert up until tapped (no auto hide timer)
+        if let _ = self.milAlertView.callback { //callback exists, so keep alert up until tapped (no auto hide timer)
             if let timer = self.autoHideTimer {
                 timer.invalidate()
                 self.autoHideTimer = nil

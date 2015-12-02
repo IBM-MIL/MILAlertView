@@ -67,7 +67,7 @@ public class MILAlertView : UIView {
     */
     class func buildAlert(alertType: AlertType!, text: String!, textColor: UIColor? = nil, textFont: UIFont? = nil, backgroundColor: UIColor? = nil, reloadImage: UIImage? = nil, inView: UIView? = nil, underView: UIView? = nil, toHeight: CGFloat? = nil, callback: (()->())!)-> MILAlertView{
         var milAlert : MILAlertView!
-        if let height = toHeight {
+        if let _ = toHeight {
             MILAlertViewManager.sharedInstance.bottomHeight = toHeight
         } else { //height = 0 if not set
             MILAlertViewManager.sharedInstance.bottomHeight = 0
@@ -87,8 +87,6 @@ public class MILAlertView : UIView {
         case .FakeMessage:
             milAlert = MILAlertView.fakeMessageAlertFromNib() as MILAlertView
             milAlert.pullDownView!.layer.cornerRadius = 2
-        default:
-            milAlert = MILAlertView.classicAlertFromNib() as MILAlertView
         }
         milAlert.alertType = typeOfAlert
         
