@@ -1,7 +1,7 @@
 MILAlertView
 =======================
 
-MILAlertView is a simple to use, minimal setup, reusable UI component built in Swift to display a __customizable alert banner__. It features two beautifully animated styles available out of the box:
+MILAlertView is a simple to use, minimal setup, reusable UI component built in Swift to display a __customizable alert banner__ for iOS. It features two beautifully animated styles available out of the box:
 
 <p align="center">
 <img src="classic_banner.gif"  alt="Drawing" height=100 border=1 /></p>
@@ -12,6 +12,10 @@ MILAlertView is a simple to use, minimal setup, reusable UI component built in S
 <img src="fake_message_banner.gif"  alt="Drawing" height=100 border=1 /></p>
 	
 * __FakeMessage__ - Fake Message banner to resemble the look and feel of Apple's iMessage banner. Tapping anywhere on the MILAlertView can optionally execute a callback method. Offers customizable text, text color, font, background color, and time to stay shown before hiding.
+
+## Requirements
+* Currently, MILAlertView is set up to work with iOS 8+
+* It may take a small amount of adjustment to work on iOS 7
 
 ## Installation
 
@@ -112,9 +116,6 @@ The complete `show()` method has several parameters, many of which are optional 
   </tr>
 </table>
 
-## Requirements
-* Currently, MILAlertView is set up to work with iOS 8+
-* It may take a small amount of adjustment to work on iOS 7
 
 ## Author
 
