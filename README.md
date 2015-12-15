@@ -35,22 +35,23 @@ Open `MILAlertViewExample.xcodeproj` within the `MILAlertViewExample` folder to 
 	And that's it! The code above animates a Classic MILAlertView banner with a callback method `tappedAlert()` inside the View Controller, which will be called when the user taps either the banner or the reload button. Once tapped, the MILAlertView hides with a smooth animation.
 
 1. Optionally, you can customize values for the other optional parameters in the `show()` method. Reference the table in the section below for parameter details and default values. The code to display the Classic MILAlertView shown in the first animated `.gif` at the top of this page is shown below.
-
-        MILAlertViewManager.sharedInstance.show(.Classic,
+```swift
+MILAlertViewManager.sharedInstance.show(.Classic,
         										text: "MILAlertView Test!", 
         										backgroundColor: UIColor.purpleColor(), 
         										inView: self.view, 
         										toHeight: 44, 
         										callback: tappedAlert)
-        
+```        
 1. Hiding an MILAlertView programmatically with a beautiful animation is simple. Put the following line where you would like to hide the MILAlertView (of any style).
 
         MILAlertViewManager.sharedInstance.hide()
 
 1. One parameter to note is the required `callback` parameter. You may set this to nil, which hides the reload button on the Classic MILAlertView style, but has no effect on the appearance of the FakeMessage style. For both styles, if `callback` is set to nil, the MILAlertView will stay shown until the user taps any part of the MILAlertView or calls `MILAlertViewManager.sharedInstance.hide()`. If you would like the MILAlertView to simply show and hide automatically on a timer, set `callback` to nil, and set the `forSeconds` parameter as shown below.
-        
-        MILAlertViewManager.sharedInstance.show(.FakeMessage, text: "MILAlertView Test!", forSeconds: 2, callback: nil)
-        
+
+```swift        
+MILAlertViewManager.sharedInstance.show(.FakeMessage, text: "MILAlertView Test!", forSeconds: 2, callback: nil)
+```       
 	The line above animates a FakeMessage style banner (with no callback method) which shows for 2 seconds then hides, as shown in the second animated `.gif` at the top of this page.
 	
 ## Customizable Parameters
@@ -71,18 +72,15 @@ MILAlertViewManager.sharedInstance.show(alertType: MILAlertView.AlertType!,
 <table>
   <caption>Parameter Descriptions</caption>
   <tr>
-    <td><tt>```swift
-    alertType: MILAlertView.AlertType!</tt><b>(Required)```</b></td>
+    <td><tt>alertType: MILAlertView.AlertType!</tt><b>(Required)</b></td>
     <td>AlertType of MILAlertView to display -- value can be either .Classic or .FakeMessage. If nil, default alertType is .Classic</td>
   </tr>
   <tr>
-    <td><tt>```swift
-    text: String!</tt><b>(Required)```</b></td>
+    <td><tt>text: String!</tt><b>(Required)</b></td>
     <td>Body text to display on the MILAlertView. If nil, default text is "MILAlertView" as set in the respective .xib</td>
   </tr>
   <tr>
-    <td><tt>```swift
-    textColor: UIColor?```</tt></td>
+    <td><tt>textColor: UIColor?</tt></td>
     <td>Color of body text to display. If nil or not set, default is as set in the respective .xib</td>
   </tr>
   <tr>
