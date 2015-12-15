@@ -55,8 +55,8 @@ Open `MILAlertViewExample.xcodeproj` within the `MILAlertViewExample` folder to 
 	
 ## Customizable Parameters
 The complete `show()` method has several parameters, many of which are optional to specify. Details of each parameter are given below. For even finer customization of your MILAlertView, you can modify `MILAlertView.xib` and `MILFakeMessageAlertView.xib` within the `Views` folder of `MILAlertView`, but this shouldn't be necessary in most cases.
-
-	MILAlertViewManager.sharedInstance.show(alertType: MILAlertView.AlertType!, 
+```swift
+MILAlertViewManager.sharedInstance.show(alertType: MILAlertView.AlertType!, 
 											text: String!, 
 											textColor: UIColor?, 
 											textFont: UIFont?, 
@@ -67,19 +67,22 @@ The complete `show()` method has several parameters, many of which are optional 
 											toHeight: CGFloat?, 
 											forSeconds: NSTimeInterval?, 
 											callback: (()->())!)
-
+```
 <table>
   <caption>Parameter Descriptions</caption>
   <tr>
-    <td><tt>alertType: MILAlertView.AlertType!</tt><b>(Required)</b></td>
+    <td><tt>```swift
+    alertType: MILAlertView.AlertType!</tt><b>(Required)```</b></td>
     <td>AlertType of MILAlertView to display -- value can be either .Classic or .FakeMessage. If nil, default alertType is .Classic</td>
   </tr>
   <tr>
-    <td><tt>text: String!</tt><b>(Required)</b></td>
+    <td><tt>```swift
+    text: String!</tt><b>(Required)```</b></td>
     <td>Body text to display on the MILAlertView. If nil, default text is "MILAlertView" as set in the respective .xib</td>
   </tr>
   <tr>
-    <td><tt>textColor: UIColor?</tt></td>
+    <td><tt>```swift
+    textColor: UIColor?```</tt></td>
     <td>Color of body text to display. If nil or not set, default is as set in the respective .xib</td>
   </tr>
   <tr>
